@@ -1,13 +1,9 @@
 def permutations(s):
     import itertools
     p=itertools.permutations(s)
+    w=[*set(p)]
     listita=[]
     h=""
-    for j in list(p):
-        h="".join(j)
-        listita.append(h)
-    listita_2 = list()
-    for item in listita:
-        if item not in listita_2:
-            listita_2.append(item)
-    return listita_2
+    for j in w:
+        listita.append("".join(j))
+    return listita
