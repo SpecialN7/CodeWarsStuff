@@ -8,10 +8,8 @@ and returns the average of those squared absolute value difference between each 
 def solution(array_a, array_b):
     number_order=-1
     f=0
-    w=0
     for h in array_a:
         number_order+=1
-        f= (h - array_b[number_order])
-        w+= f*f
-    return w/len(array_a)
+        f= (h - array_b[number_order])**2
+    return f/len(array_a)
     pass
